@@ -1,0 +1,368 @@
+*{
+  box-sizing: border-box;
+}
+html{
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+
+}
+body{
+  background-image:
+  linear-gradient(
+    to bottom right,
+    hsl(199, 100%, 11%),hsl(199, 100%, 21%)50%,rgba(169,169,169,1)50%,rgba(232,232,232,0.2)
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+.all{
+  background-color: #F8F8F8;
+  box-shadow:-4px 1px 75px  rgba(0,0,0,0.75), 1px 4px 75px rgba(0,0,0,0.25);
+  position: relative ;
+  width: 100%;
+  min-height: 80px;
+  max-width:850px;
+  margin: 80px;
+}
+.cl1{
+  position: relative;
+  background: hsl(199, 100%, 15%);
+  padding: 40px;
+  float: left;
+  width: 35%;
+}
+.cl2{
+  position: relative;
+  padding: 40px;
+  background: #F8F8F8;
+  float: left;
+  width: 65%;
+  font-size: 0.9em;
+}
+.clearfix::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+@media only screen and (max-width: 900px) {
+  .all{
+      margin: 30px
+  }
+}
+@media only screen and (max-width: 802px) {
+.all{
+    margin: 30px
+}
+.cl1{
+  width: 100%;
+}
+.cl2{
+  width: 100%;
+}
+}
+@media only screen and (max-width: 700px){
+.profile .modal-content{
+  width: 100%;
+}  
+.about .last{
+    grid-template-columns: repeat(2,1fr);
+}}
+@media only screen and (max-width: 550px)
+{
+  .all{
+    margin:10px;
+  }
+  .about .box{
+    flex-direction: column;
+    
+  }
+  .about .last{
+  grid-template-columns: repeat(1,1fr);
+}
+.about .box2{
+  grid-template-columns: repeat(1,1fr);
+}
+}
+.profile{
+  display: flex;
+  align-items: center;
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgba(255, 255,255, 0.2);
+  position: relative;
+  flex-direction: column;
+  object-fit: cover;
+}
+.profile #myimg{
+  border: 4px solid rgba(255, 255,255, 0.2);
+  border-radius: 50%;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+}
+.profile #myimg img{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.profile #myimg:hover{
+  opacity: 0.7;
+  cursor: pointer;
+}
+.profile h2{
+  font-size: 1.6em;
+  color: #fff;
+  margin-top: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.4em;
+}
+.profile h2 span{
+  font-size: 0.8em;
+  font-weight: 300;
+}
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.9); 
+}
+.modal-content {
+  margin: auto;
+  display: block;
+  margin-top: 50px;
+  width: 40%;
+  height: auto;
+  max-width: 500px;
+}
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+.modal-content, #caption {  
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.1)} 
+  to {transform: scale(1)}
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.close:hover,.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+.contactinfo{
+  padding-top: 40px;
+  position: relative;
+  color: #fff;
+}
+.contactinfo h3{
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-size: 1.6em;
+}
+.contactinfo ul{
+  list-style-type: none;
+  position: relative;
+  left: 0;
+  margin:0;
+  padding: 0;
+  line-height: 1.8em;
+}
+.contactinfo .icon{
+  color: lightblue;
+  display: inline-block;
+  padding-right: 0.8em;
+}
+.contactinfo span,a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 300;
+}
+.contactinfo span:hover{
+  color: lightblue;
+  cursor: pointer;
+}
+.contactinfo a:hover{
+  color: lightblue;
+  cursor:pointer;
+  text-decoration: underline;
+}
+.education h3{
+  font-size: 1.6em;
+}
+.education h5{
+  color: lightblue;
+  font-weight: 400;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+.education ul li:first-child
+{
+  margin-bottom:15px;
+}
+.education li h4:nth-child(2){
+  font-weight: 400;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+.education li h4{
+  font-weight: 300;
+  font-size: 1em;
+}
+.bar{
+  position: relative;
+  width: 100%;
+  height: 6px;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.about{
+  margin-bottom: 30px;
+}
+.about h2{
+  color: #003147;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right,rgb(232,232,232, 0.6),rgb(232,232,232,1));
+  letter-spacing: 1px;
+}
+.about p{
+  color: #333;
+  line-height: 1.3em;
+}
+.about h4{
+  color: #003147;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right,rgb(232,232,232, 0.6),rgb(232,232,232,1));
+}
+.year{
+  float: right;
+  font-weight: 500;
+  color: 	#909090;
+}
+.about ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.about li{
+  line-height: 1.2em;
+  margin-bottom: 15px;
+}
+.first{
+  font-weight: 500; 
+}
+.lineheight{
+  line-height: 1.2em;
+  min-width: 150px;
+  margin-right: 10px;
+  color: 	#909090;
+  font-weight: 500;
+}
+.box{
+  display: flex;
+  flex-direction: row;
+}
+.box h5{
+font-size: 1.05em;
+color: #2a7da2;
+font-weight: 650;
+}
+.box p{
+line-height: 1.2em;
+}
+.box2{
+position: relative;
+width: 100%;
+display: grid;
+grid-template-columns: 150px 1fr;
+justify-content: center;
+align-items: center;
+font-weight: 650;
+color: #909090;
+margin: 10px;
+}
+.box2 .percent{
+position: relative;
+width: 100%;
+height: 10px;
+background: #f0f0f0;
+}
+.box2 .percent div{
+position: absolute;
+top: 0;
+left: 0;
+height: 10px;
+background:#2a7da2;
+}
+.last{
+display: grid;
+grid-template-columns: repeat(4,1fr);
+}
+.last ul li{
+list-style-type: none;
+font-weight: 500;
+color: #333;
+margin: 10px 0;
+}
+.last .bi{
+color: #2a7da2;
+font-size: 18px;
+width: 20px;
+margin-right: 10px;
+}
+.socialmedia{
+position: relative;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+margin-top:40px
+}
+.socialmedia a{
+color: lightblue;
+margin:10px;
+}
+.socialmedia a:hover{
+opacity: 0.6;
+}
